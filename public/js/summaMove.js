@@ -18,8 +18,9 @@
 
     const toonOefeningen = () => {
         let tabelInhoud = ''
-        oefeningen.map(el => tabelInhoud += `<tr><td>${el.naam}</td><td>${el.beschrijving}</td><td>${el.vertaling}</td>
-                        <td onclick="verwijder(${el.id})"> x </td></tr>`)
+        oefeningen.map(el => tabelInhoud += `<tr><td>${el.naam}</td><td>${el.beschrijving}</td>
+        <td>${el.vertaling}</td>
+                        </tr>`)
         document.querySelector("#tabelInhoud").innerHTML = tabelInhoud
     }
     const laad = async () => {

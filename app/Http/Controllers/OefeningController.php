@@ -12,6 +12,10 @@ class OefeningController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     public function scherm(){
+        return view('oefeningen');
+     }
     public function index(Request $request)
     {
         {
@@ -192,4 +196,6 @@ class OefeningController extends Controller
              ]; 
              return response()->json($content, 202);
      }    
+
+  
 }

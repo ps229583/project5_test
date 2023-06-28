@@ -14,7 +14,7 @@
 
 
     <br />
-    <table>
+    <table id="oefeningen_tabel">
         <tr>
             <th>Naam</th>
             <th>Beschrijving</th>
@@ -23,9 +23,9 @@
         <tbody id="tabelInhoud" />
     </table>
 
+ 
 
-
-    <script src="{{asset('js/summaMove.js') }}"></script>
+    <script src="{{ asset('js/summaMove.js') }}"></script>
 </body>
 </html>
 

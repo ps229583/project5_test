@@ -17,6 +17,10 @@
                         {{ __('Home') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('oefeningen')" :active="request()->routeIs('oefeningen')">
+                        {{ __('Oefeningen') }}
+                    </x-nav-link>
+
        
 
 
