@@ -1,0 +1,1 @@
+<img src="{{ URL('images/summa2.png')}}" width="100px"/>
