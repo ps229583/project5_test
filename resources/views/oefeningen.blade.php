@@ -4,7 +4,7 @@
     xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 
 <head>
-    <title> Personeel CRUD+</title>
+    <title>SummaMove</title>
     <meta charset="utf-8" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
