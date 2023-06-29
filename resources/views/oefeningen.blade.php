@@ -10,9 +10,9 @@
 
     <body onload="laad()">
         <h1>Summa move oefeningen</h1>
+        <br>
 
-
-        <br />
+        <div>
         <table id="oefeningen_tabel">
             <tr>
                 <th>Naam</th>
@@ -21,6 +21,8 @@
             </tr>
             <tbody id="tabelInhoud" />
         </table>
+        </div>
+
 
         <script src="{{ asset('js/summaMove.js') }}"></script>
     </body>
