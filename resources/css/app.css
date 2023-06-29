@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 
+body{
+    overflow: hidden;
+}
+
+
 #oefeningen_tabel
 {
     width: 80vw;
     text-align: left;
 
 }
+
+
