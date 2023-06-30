@@ -16,18 +16,15 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
-
-     
-
-       
-
-
-
-                    @if (Auth::check())
-                    <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-nav-link :href="route('oefeningen')" :active="request()->routeIs('oefeningen')">
                         {{ __('Oefeningen') }}
                     </x-nav-link>
+                    @if (Auth::check())
+                    <x-nav-link :href="route('uitgebreid')" :active="request()->routeIs('uitgebreid')">
+                        {{ __('Uitgebreid') }}
+                    </x-nav-link>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+
                         <x-dropdown width="48">
                             <x-slot name="trigger">
                                 <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
@@ -42,17 +39,12 @@
                             </x-slot>
 
                             <x-slot name="content">
-
-                                <!--<x-dropdown-link>
-                                    {{ __('Profile') }}
-                                </x-dropdown-link> -->
-
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
                                     <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
+                                            this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
                                 </form>
@@ -68,9 +60,6 @@
                         {{ __('Register') }}
                     </x-nav-link>
                     @endif
-
-            <!-- Settings Dropdown -->
-            
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">

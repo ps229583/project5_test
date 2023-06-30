@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 
-body{
-    overflow: hidden;
+.video-list li {
+    margin-bottom: 30px; /* Adjust the value as per your desired spacing */
 }
-
 
 #oefeningen_tabel
 {
@@ -15,4 +14,15 @@ body{
 
 }
 
+.exercise-container {
+    margin-bottom: 60px; /* Adjust the value as per your desired spacing */
+}
 
+.exercise-card {
+    margin-bottom: 40px; /* Adjust the value as per your desired spacing */
+}
+
+.exercise-name {
+    text-align: center;
+    font-weight: bold;
+}

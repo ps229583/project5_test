@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OefeningController;
+use App\Http\Controllers\UitgebreidController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ use App\Http\Controllers\OefeningController;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/uitgebreid', [UitgebreidController::class, 'uitgebreidscherm'])->name('uitgebreid');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

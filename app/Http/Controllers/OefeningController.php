@@ -13,9 +13,9 @@ class OefeningController extends Controller
      * Display a listing of the resource.
      */
 
-     public function scherm(){
+    public function scherm(){
         return view('oefeningen');
-     }
+    }
     public function index(Request $request)
     {
         {

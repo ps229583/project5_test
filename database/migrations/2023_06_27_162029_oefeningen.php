@@ -16,7 +16,7 @@ return new class extends Migration
             $table->tinyInteger('id')->autoIncrement();
             $table->string('naam', 50)->nullable(false);
             $table->string('beschrijving', 80)->nullable(false);
-            $table->string('vertaling', 50)->nullable(false);
+            $table->string('vertaling', 80)->nullable(false);
             });
     }
 
