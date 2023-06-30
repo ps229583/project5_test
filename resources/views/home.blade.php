@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     @vite('resources/css/app.css')
-    <body>
+    <body id="bodyMain">
     <section class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:pary">
         <div style="padding-bottom: 500px;">
             <h1 class="font-pt-serif text-6xl  mb-7">Welkom bij SummaMove</h1>
