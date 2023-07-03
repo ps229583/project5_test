@@ -12,7 +12,7 @@ class OefeningController extends Controller
     /**
      * Display a listing of the resource.
      */
-
+//oefening controller deze wordt gebruikt om de api haar GET, PUT en delete aan te sturen.
     public function scherm(){
         return view('oefeningen');
     }
