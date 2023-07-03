@@ -18,7 +18,7 @@ use App\Http\Controllers\OefeningController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+// route naar de API controller.
 Route::apiResource('oefeningen', OefeningController::class);
 
 Route::fallback(function () {
