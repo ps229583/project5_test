@@ -15,11 +15,20 @@ use App\Http\Controllers\OefeningController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-// route naar de API controller.
+Route::post('/register', [AuthenticationController::class, 'register']);
+Route::post('/login', [AuthenticationController::class, 'login']);
+
+
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('profile', function (Request $request) { 
+        return auth()->user(); 
+    });
+
 Route::apiResource('oefeningen', OefeningController::class);
+
+Route::post('/logout', [AuthenticationController::class, 'logout']);
+});
 
 Route::fallback(function () {
 
