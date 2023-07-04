@@ -79,3 +79,29 @@
         oefeningen = await response.data
         await laadOefeningen()
     }
+
+    const login = async () => {
+        // console.log('Begin Login')
+        const gebruiker = {}
+        gebruiker.password = document.querySelector("#wachtwoord").value
+        gebruiker.email = document.querySelector("#mail").value
+    
+        //axios.interceptors.response.use(response => {
+        //    return response;
+        // }, error => {
+         //  if (error.response.status === 401) {
+            //place your reentry code
+         //  }
+        //   return error;
+       //  });
+    
+        const respons = await axios.post(
+                 apiLogin, gebruiker, { headers: { 'Content-Type': 'application/json' } })
+        // console.log('respons', respons)
+        access_token = await respons.data.access_token
+        // console.log('access_token: ', access_token)
+    
+        document.querySelector("#appLogin").style.visibility = "hidden"
+        document.querySelector("#appContent").style.visibility = "visible"
+        // console.log('Einde login')
+        await laad()
